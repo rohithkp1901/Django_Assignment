@@ -1,0 +1,131 @@
+<style>
+    .main{
+            border: 3px solid;
+            animation: colorChange 3s linear infinite;
+            padding: 20px;
+            margin-top: 50px;
+            margin-left: 550px;
+            width: 400px;
+            height: 600px;
+        }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    #div8{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    #home{
+        background-color: aqua;
+        border: 2px solid;
+        animation: colorChange 3s linear infinite;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    #register{
+            background: greenyellow;
+            color: black;
+            border: none;
+        border-radius: 10px;
+        padding: 10px;
+        }
+    #login{
+            background: yellow;
+            color: black;
+            border: none;
+        border-radius: 10px;
+        padding: 10px;
+        }
+    #register ,#login a{
+            color: black;
+            font-weight: bold;
+        }
+    #register:hover,#login:hover{
+        background-color: rgb(223, 219, 219);
+    }
+    #home:hover{
+        background-color: rgb(6, 240, 6);
+        
+    }
+    #home:hover a{
+        color:white;
+        font-weight: bold;
+
+    }
+    a{
+        text-decoration: none;
+        font-weight: bold;
+
+    }
+     
+    @keyframes colorChange {
+            0% {
+              border-color: red;
+            }
+            50% {
+              border-color: rgb(28, 199, 28);
+            }
+            75% {
+              border-color: yellow;
+            }
+            100% {
+              border-color: rgb(0, 145, 255);
+            }
+          }
+    
+</style>
+<div class="main">
+    <h1>REGISTRATION FORM</h1>
+    <form action="" id="regfrm">
+        <div id="div1">
+            Full Name
+            <input type="text" id="fullname" placeholder="Full name">
+        </div>
+        <div id="div1">
+            Register Number
+            <input type="text" id="regno" placeholder="Register Number">
+        </div>
+        <div id="div2">
+            Password
+            <input type="password" id="password">
+        </div>
+        <div id="div3">
+            Address
+            <textarea name="Address" id="address" cols="20" rows="5"></textarea>
+        </div>
+        <div id="div4">
+            Age
+            <select id="age">
+                <option value="">Select age</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+            </select>
+        </div>
+        <div id="div5">
+            Gender
+            <input type="radio" id="gendermale" value="Male" name="Gender">M
+            <input type="radio" id="genderfemale" value="Female" name="Gender">F
+        </div>
+        <div id="div6">
+            Hobbies
+            <input type="checkbox" id="hob1">Music
+            <input type="checkbox" id="hob2">Sports
+            <input type="checkbox" id="hob3">Movies
+            <input type="checkbox" id="hob4">Games
+        </div>
+        <div id="div7">
+            Allotment Memo
+            <input type="file" id="memo">
+        </div>
+        <div id="div8">
+            <button id="register">Register</button>
+            <button id="login"><a href="/login/">Log in</button></a>
+            <button id="home"><a href="/">Home</a></button>
+        </div>
+    </form>
+</div>

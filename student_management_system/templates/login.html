@@ -1,0 +1,85 @@
+<style>
+    .body{
+            border: 3px solid;
+            animation: colorChange 3s linear infinite;
+            padding: 20px;
+            margin-top: 50px;
+            margin-left: 550px;
+            width: 250px;
+            height: 300px;
+        }
+    .btns{
+        padding-top: 30px;
+        display: flex;
+        gap: 20px;
+    }
+    a{
+        text-decoration: none;
+    }
+    #home{
+        background-color: aqua;
+        border: 2px solid;
+        animation: colorChange 3s linear infinite;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    #register{
+            background: greenyellow;
+            color: black;
+            border: none;
+        border-radius: 10px;
+        padding: 10px;
+        }
+    #login{
+            background: yellow;
+            color: black;
+            border: none;
+        border-radius: 10px;
+        padding: 10px;
+        }
+    #register a,#login a{
+            color: black;
+        }
+    #register:hover,#login:hover{
+        background-color: rgb(223, 219, 219);
+    }
+    #home:hover{
+        background-color: rgb(6, 240, 6);
+        
+    }
+    #home:hover a{
+        color:white;
+    }
+
+    @keyframes colorChange {
+            0% {
+              border-color: red;
+            }
+            50% {
+              border-color: rgb(28, 199, 28);
+            }
+            75% {
+              border-color: yellow;
+            }
+            100% {
+              border-color: rgb(0, 145, 255);
+            }
+          }
+       
+</style>
+<div class="body">
+    <h1 style="text-align: center;">Log in </h1>
+    <div>
+        <p>Student ID</p>
+        <input type="text" placeholder="Student ID">
+    </div>
+    <div>
+        <p>Password</p>
+        <input type="password" placeholder="password">
+    </div>
+    <div class="btns">
+        <button id="login">Log in</button>
+        <button id="register"><a href="/register/">Register</a></button>
+        <button id="home"><a href="/">Home</a></button>
+    </div>
+</div>

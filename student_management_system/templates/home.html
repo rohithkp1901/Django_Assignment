@@ -1,0 +1,84 @@
+<style>
+        .body{
+            border: 3px solid;
+            animation: colorChange 3s linear infinite;
+            padding: 10px;
+            height: 300px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+        #register{
+            background: greenyellow;
+            color: black;
+        }
+        #login{
+            background: yellow;
+            color: black;
+        }
+        #register a,#login a{
+            color: black;
+        }
+        #register a,#login a:hover{
+            background-color: transparent;
+        }
+        #register:hover,#login:hover{
+            background-color: aquamarine;
+        }
+        @keyframes colorChange {
+            0% {
+              border-color: red;
+            }
+            15%{
+              border-color: rgb(206, 114, 143);
+            }
+            25% {
+              border-color: rgb(10, 149, 230);
+            }
+            
+            50% {
+              border-color: rgb(28, 199, 28);
+            }
+            75% {
+              border-color: yellow;
+            }
+            100% {
+              border-color: red;
+            }
+          }
+          
+</style>
+<div class="body">
+<h1 style="text-align: center;">Student Management System</h1>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#students">Students</a>
+    <a href="#courses">Courses</a>
+    <a href="#grades">Grades</a>
+    <a href="#reports">Reports</a>
+    <button id="register"><a href="/register/">Register</a></button>
+    <button id="login"><a href="/login/">Log in</a></button>
+</nav>
+<div>
+    <h2>Welcome to Student Management System</h2>
+    <p>This System will helps,and allows you to manage Students,Courses,grades report etc.</p>
+</div>
+</div>
