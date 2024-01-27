@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            margin: 50px;
+            margin-right: 500px;
+            margin-left: 500px;
+            padding: 10px;
+            font-weight: bold;
+            font-size: large;
+            border: 4px solid;
+            border-radius: 10px;
+            animation: colorChange 4s linear infinite;
+            background-image: linear-gradient(to right,rgb(111, 178, 200),rgb(138, 131, 215),rgb(87, 160, 184));
+        }
+        div{
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        input{
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+        textarea{
+            border-radius: 10px;
+        }
+        button{
+            margin-left: 100px;
+            margin-right: 100px;
+            padding: 10px;
+            font-weight: bold;
+            background-color: rgb(80, 199, 96);
+            border: 2px solid;
+            animation: colorChange 3s linear infinite;
+            border-radius: 10px;
+        }
+@keyframes colorChange {
+  0% {
+    border-color: red;
+  }
+  25% {
+    border-color: rgb(133, 133, 233);
+  }
+  50% {
+    border-color: rgb(92, 223, 92);
+  }
+  75% {
+    border-color: yellow;
+  }
+  100% {
+    border-color: rgb(173, 112, 112);
+  }
+}
+
+    </style>
+</head>
+<body>
+    <form action="/alogin/" method="POST">
+        {%csrf_token%}
+        <h1>Admin Login</h1>
+        <div>
+            <p>Username</p>
+            <input type="text" name="username">
+        </div>
+        <div>
+            <p>Password</p>
+            <input type="password" name="password">
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+</body>
+</html>

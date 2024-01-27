@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table{
+            font-size: large;
+            margin-top: 50px;
+            margin-left: 100px;
+            border: 1px solid;
+            animation: colorChange 4s linear infinite;
+
+        }
+        th,td{
+            padding: 10px;
+        }
+        .button1{
+            padding: 10px;
+            font-weight: bold;
+            background-color: rgb(27, 183, 181);
+            /* border: 2px solid;
+            animation: colorChange 3s linear infinite; */
+            border-radius: 10px;
+        }
+        .button2{
+            padding: 10px;
+            font-weight: bold;
+            background-color: rgb(26, 207, 68);
+            /* border: 2px solid;
+            animation: colorChange 3s linear infinite; */
+            border-radius: 10px;
+        }
+        .button3{
+            padding: 10px;
+            font-weight: bold;
+            background-color: rgb(223, 19, 19);
+            /* border: 2px solid;
+            animation: colorChange 3s linear infinite; */
+            border-radius: 10px;
+        }
+        @keyframes colorChange {
+  0% {
+    border-color: red;
+  }
+  25% {
+    border-color: rgb(133, 133, 233);
+  }
+  50% {
+    border-color: rgb(92, 223, 92);
+  }
+  75% {
+    border-color: yellow;
+  }
+  100% {
+    border-color: rgb(173, 112, 112);
+  }
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+    </style>
+</head>
+<body>
+    <table border="1">
+        {%csrf_token%}
+        <tr>
+            <th>FIRST NAME</th>
+            <th>LAST NAME</th>
+            <th>EMAIL</th>
+            <th>PHONE</th>
+            <th>PASSWORD</th>
+            <th>GENDER</th>
+        </tr>
+        {% for i in cr %}
+        <tr>
+            <td>{{i.firstname}}</td>
+            <td>{{i.lastname}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.phone}}</td>
+            <td>{{i.password}}</td>
+            <td>{{i.gender}}</td>
+            <td><button class="button1"><a href="{% url 'detailview' i.id %}">VIEW</a></button></td>
+            <td><button class="button2"><a href="{% url 'update' i.id %}">UPDATE</a></button></td>
+            <td><button class="button3"><a href="{% url 'delete' i.id %}">DELETE</a></button></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

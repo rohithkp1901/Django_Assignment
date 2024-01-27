@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HAI,{{firstname}} {{lastname}}</h1>
+    <h3>ID: {{id}}</h3>
+    <a href="{% url 'update2' id %}">UPDATE</a>
+    <button><a href="{% url 'logout' %}">LOGOUT</a></button>
+</body>
+</html>

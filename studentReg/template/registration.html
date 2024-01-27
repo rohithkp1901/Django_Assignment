@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+
+    <style>
+        .main{
+            display: flex;
+            flex-direction: column;
+            width: 813px;
+            margin: 20px 350px;
+        
+        }
+        .div2{
+            display: flex;
+            flex-direction: row;
+            background: white;
+            height: 510px;
+        }
+        body{
+            background-image: url("{% static 'images/reg.png' %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+        .fn,.ln,.email,.ph{
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <a href="/login/" style="color: white; margin-left: 40px;padding: 20px;">LOGIN</a>
+   <div class="main">
+    <div class="div1" style="background: rgb(0, 0, 0,0.3);">
+        <h1 style="color: white; text-align: center;">STUDENT REGISTRATION FORM</h1>
+    </div>
+    <div class="div2">
+        <div class="form" style="padding: 20px;">
+            <form action="" method="POST">
+                {%csrf_token%}
+                <div class="fn">
+                    <label for="fn">FIRST NAME :</label>
+                    <input type="text" placeholder="First Name" name="firstname"style="padding: 5px; border:1px solid black">
+                </div>
+                <div class="ln">
+                    <label for="ln">LAST NAME :</label>
+                    <input type="text" placeholder="Last Name" name="lastname"style="padding: 5px; border:1px solid black">
+                </div>
+                <div class="email">
+                    <label for="mail">EMAIL :</label>
+                    <input type="email" placeholder="Email" name="email"style="padding: 5px; border:1px solid black">
+                </div>
+                <div class="ph">
+                    <label for="ph">PHONE :</label>
+                    <input type="number" placeholder="Phone" name="phone"style="padding: 5px; border:1px solid black">
+                </div>
+                <div class="pswd" style="display: flex; flex-direction: column; padding: 5px;gap: 10px;">
+                    <label for="pswd">PASSWORD :</label>
+                    <div class="pw" style="display: flex; flex-direction: row; gap: 15px;">
+                        <div style="display: flex; flex-direction: column;">
+                            <input type="password" name="password" placeholder="Password" style="padding: 5px; border:1px solid black">
+                            <span style="color: red;">Minimum of 6 Characters</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column;">
+                            <input type="password" name="password" placeholder="Confirm Password" style="padding: 5px; border:1px solid black">
+                            <span> </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gender" style="display: flex;padding: 5px; padding-top: 10px;">
+                    <label for="gender">GENDER :</label>
+                    <div class="m">
+                        <input type="radio" name="gender" value="Male">
+                        <span>Male</span>
+                    </div>
+                    <div class="f">
+                        <input type="radio" name="gender" value="Female">
+                        <span>Female</span>
+                    </div>
+                </div>
+                
+                    <Button type="submit" style="padding:8px 150px; margin-top: 40px;margin-left: 10px;background: brown;border: none;">SUBMIT</Button>
+                
+            </form>
+        </div>
+        <div class="stuimg">
+            <img src="{% static 'images/students.png' %}" alt="" width="400" height="510">
+        </div>
+    </div>
+</div>
+</body>
+</html>

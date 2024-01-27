@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        div{
+            margin-top: 50px;
+            margin-left: 250px;
+            margin-right: 850px;
+            font-size: large;
+            text-align: left;
+            border: 2px solid;
+            animation: colorChange 4s infinite;
+            padding: 10px;
+        }
+        span{
+            padding: 10px;
+            font-weight: bold;
+        }
+        
+        @keyframes colorChange {
+  0% {
+    border-color: red;
+  }
+  25% {
+    border-color: rgb(133, 133, 233);
+  }
+  50% {
+    border-color: rgb(92, 223, 92);
+  }
+  75% {
+    border-color: yellow;
+  }
+  100% {
+    border-color: rgb(173, 112, 112);
+  }
+}
+    </style>
+</head>
+<body>
+    <div>
+        <h2 style="text-align: center;">VIEW DETAIL</h2>
+    <span >First Name : </span>{{cm.firstname}} <br>
+    <span>Last Name : </span>{{cm.lastname}} <br>
+    <span>Email : </span>{{cm.email}} <br>
+    <span>Phone : </span>{{cm.phone}} <br>
+    <span>Gender : </span>{{cm.gender}} <br>
+
+    
+    </div>
+</body>
+</html>
